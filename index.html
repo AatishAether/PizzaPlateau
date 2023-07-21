@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="./Scripts/indexScript.js"></script>
+  <script src="./Scripts/cart.js" async></script>
+
+</head>
+
+<body>
+<<<<<<< HEAD
+  <nav class="navbar">
+    <div class="navbar-item">
+<div class="bigdiv"><img src="./Resources/PizzaPlateauLogo.png" alt="Logo" width="290" height="240"></div>
+    </div>
+    <div class="navbar-item">
+    </div>
+    <div style="display:flex; flex-direction:row;justify-content:space-between; align-items:center;">
+      <div class="navbar-item" style="display:flex; flex-direction:column; margin-left: 100px;">
+        <button type="button" class="button-login" onclick="goToLogin()">Login / Signup</button>
+        <p id="username">welcome guest fname<php></php>
+        </p>
+      </div>
+      <!-- checkout button at the right side of the navbar -->
+
+    </div>
+  </nav>
+  <div class="body-page">
+    <div class="catagories" id="cart">
+      <br><br><br><br><br><br><br>
+      <h3 class="section-header">Cart</h3>
+      <div class="cart-items">
+        <p id="cart-CYO"></p>
+      </div>
+      <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+=======
+    <nav class="navbar">
+      <div class="navbar-item">
+      </div>
+      <div class="navbar-item">
+        <p id="username">welcome guest fname<php></php></p>
+      </div>
+      <div style="display:flex; flex-direction:row;justify-content:space-between; align-items:center;">
+        <div class="navbar-item" style="flex-direction: column; display: flex;">
+          <button type="button" class="button-login" onclick="goToLogin()">login / signup</button>
+        </div>
+        <!-- checkout button at the right side of the navbar -->
+        <div class="navbar-item" style="display:flex; flex-direction:column; margin-left: 100px;" >
+          <button class="button-checkout" onclick="loadCheckout()">Checkout</button>
+        </div>
+      </div>
+    </nav>
+    <div class="body-page">
+      <div class="catagories" id="cart">
+        <img src="./Resources/PizzaPlateauLogo.png" alt="Logo" width="250" height="200">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+>>>>>>> parent of 3e39dd7 (Merge branch 'main' of https://github.com/Gostofsparta3/CIS408Project)
+      </div>
+      <button class="button-checkout" onclick="loadCheckout()">Checkout</button>
+    </div>
+
+
+
+
+    <!-- pizza list -->
+    <div class="pizza-list" id="pizza-list">
+      <!-- a div with three dives the outer divs are a line, while the center div contains the title of the group -->
+      <!--------------------------------------------START div for pizza title ----------------------------------------->
+      <div class="divider">
+        <div class="divider-bar"></div>
+        <div class="divider-text" id="pizzas">Pizzas</div>
+        <div class="divider-bar"></div>
+      </div>
+      <!---------------------------------------------END div for pizza title ------------------------------------------>
+
+
+      <!-----------------------------------------------------BYO PIZZA ------------------------------------------------------------->
+      <div class="pizza-section">
+        <div class="pizza-list-item" onclick="openModifiesSection('modifiers_0')">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Create Your Own</b><br />
+              Includes our original sauce, signature three cheeses, choice of crust styles and your favorite toppings
+            </p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$7.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Pizzas/BYO_Pizza.webp" width="120" height="100">
+            </div>
+          </div>
+        </div>
+        <!-- a div that is hidden by default  but when the div above is clicked this div becomes visible-->
+        <div class="pizza-modifiers-view" id="modifiers_0">
+          <form action="#">
+            <div class="pizza-modifiers">
+              <div class="pizza-modifiers-left">
+                <div class="pizza-modifiers-left-item">
+                  <p>Size</p>
+                  <select name="size" id="custSize">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large" selected="selected">Large</option>
+                  </select>
+                </div>
+                <div class="pizza-modifiers-left-item">
+                  <p>Crust</p>
+                  <select name="crust" id="custCrust">
+                    <option value="thin">Thin</option>
+                    <option selected="selected" value="normal">normal</option>
+                    <option value="thick">Thick</option>
+                    <option value="stuffed">Stuffed</option>
+                  </select>
+                </div>
+                <div class="pizza-modifiers-left-item">
+                  <p>Sauce</p>
+                  <select name="sauce" id="custSauce">
+                    <option value="red">red</option>
+                    <option value="white">white</option>
+                    <option value="No Sauce">No Sauce</option>
+                  </select>
+                </div>
+              </div>
+              <div class="pizza-modifiers-right">
+                <div class="pizza-modifiers-right-item">
+                
+                  <div class="pizza-modifiers-right-item-toppings">
+                    <p><b>Toppings</b></p>
+                    <div style="display: flex; flex-direction: row;">
+                      <div style="display: flex; flex-direction: column;">
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custCheese" value="Cheese" checked="checked">
+                          <label for="custCheese">Cheese</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custPepperoni" value="pepperoni">
+                          <label for="custPepperoni">Pepperoni</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custSausage" value="sausage">
+                          <label for="custSausage">Sausage</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custBacon" value="bacon">
+                          <label for="custBacon">Bacon</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custHam" value="ham">
+                          <label for="custHam">Ham</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custSteak" value="Steak">
+                          <label for="custSteak">Steak</label>
+                        </div>
+                      </div>
+                      <div style="display: flex; flex-direction: column;">
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custGreenPepper" value="Green Pepper">
+                          <label for="custGreenPepper">Green Pepper</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="YellowOnion" value="Yellow Onion">
+                          <label for="YellowOnion">Yellow Onion</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custMushroom" value="Mushroom">
+                          <label for="custMushroom">Mushroom</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custSpinach" value="Spinach">
+                          <label for="custSpinach">Spinach</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="custBlackOlives" value="Black Olives">
+                          <label for="custBlackOlives">Black Olives</label>
+                        </div>
+                        <div class="pizza-modifiers-right-item-toppings-item">
+                          <input type="checkbox" name="topping" id="GreenOlives" value="Green Olives">
+                          <label for="GreenOlives">Green Olives</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pizza-modifiers-box">
+                  <p><b>Special Instructions</b></p>
+                  <textarea name="special-instructions" id="special-instructions" cols="30" rows="10"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="pizza-modifiers-buttons">
+              <button class="pizza-modifiers-buttons-cancel" type="button"
+                onclick="openModifiesSection('modifiers_0')">Cancel</button>
+              <button class=" btn pizza-modifiers-buttons-add" type="button" onclick="customAddToCart()">Add to
+                Cart</button>
+            </div>
+          </form>
+        </div>
+
+
+
+      <!--------------------------------------------CHEESE PIZZA---------------------------------------------------------------------->
+      
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p class="shop-item-title"><b>Cheese Pizza</b><br />
+              A classic blend of three cheeses <br />
+              180 cal. per slice</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p class="shop-item-price">$7.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img class="shop-item-image" src="./Images/Pizzas/Cheese_Pizza.webp" width="120" height="100">
+            </div>
+          </div>
+        </div>
+  
+
+
+        <!----------------------------------------------PEPPERONI PIZZA-------------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Pepperoni Pizza</b><br />
+              Our traditional Pepperoni pizza.<br />
+              350 cal. per slice
+            </p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p class="shop-item-price">$8.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Pizzas/Pepperoni_Pizza.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-----------------------------------------MEAT LOVERS PIZZA ------------------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Meat Lovers Pizza</b><br />
+              Pepperoni, ham, Italian sausage, bacon, our original sauce and signature three cheeses<br />
+              440 cal. per slice.</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$10.95</p>
+            </div>
+            <!-- image -->
+            <div style="height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Pizzas/MeatLovers_Pizza.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!-----------------------------------------------DELUX PIZZA------------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Deluxe Pizza</b><br />
+              Pepperoni, Italian sausage, mushrooms, green peppers, onions, our original sauce and signature three
+              cheeses<br />
+              400 cal. per slice</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$9.99</p>
+            </div>
+            <!-- image -->
+            <div style="height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Pizzas/Delux_Pizza.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!---------------------------------------------VEGGIE PIZZA--------------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Veggie Pizza</b><br />
+              Mushrooms, black olives, onions, sliced tomatoes, our original sauce and signature three cheeses, plus
+              feta<br />
+              330 cal.</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$9.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Pizzas/Veggie_Pizza.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!-----------------------------------------------PHILLY PIZZA ------------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Philly Pizza</b><br />
+              White cheese sauce piled high with tender shaved steak, mushrooms, green peppers, onions and our
+              <br />three fresh signature cheeses<br />
+              330 cal. per slice</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$10.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Pizzas/Philly_Pizza.jfif" width="120" height="110">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!----------------------------------------------SIDES--------------------------------------------------------------->
+      <!--------------------------------------------START div for pizza title ----------------------------------------->
+      <div class="divider">
+        <div class="divider-bar"></div>
+        <div class="divider-text" id="sides">sides</div>
+        <div class="divider-bar"></div>
+      </div>
+      <!--------------------------------------------END div for pizza title ----------------------------------------->
+
+      <!-----------------------------------------------------CHEEZY BREAD ------------------------------------------------------------->
+      <div class="pizza-section">
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Cheezy Bread</b><br />
+              Fresh-baked bread strips with our three-cheese blend and garlic butter, served with a side of marianara or
+              ranch.<br />
+              90 cal. per piece</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$8.95</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Sides/CheeseBreads.webp" width="120" height="110">
+            </div>
+          </div>
+        </div>
+
+
+        <!-----------------------------------------------------BREAD STICKS ------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Bread Sticks</b><br />
+              Fresh-baked bread strips with garlic butter; topped with Parmesan & Roma Seasoning. Served with a side of
+              marianara or Ranch.<br />
+              130 cal. per piece</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$9.95</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Sides/BreadSticks.jfif" width="120" height="110">
+            </div>
+          </div>
+        </div>
+
+        <!--------------------------------------------------------WINGS ---------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Wings</b><br />
+              Tender all-white meat breaded chicken, served with your choice of dipping sauce<br />
+              60 cal. per piece</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$8.95</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Sides/Wings.webp" width="120" height="110">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------------------------------------DRINKS-------------------------------------------------------->
+      <!--------------------------------------------START div for pizza title ----------------------------------------->
+      <div class="divider">
+        <div class="divider-bar"></div>
+        <div class="divider-text" id="drinks">drinks</div>
+        <div class="divider-bar"></div>
+      </div>
+      <!--------------------------------------------END div for pizza title ----------------------------------------->
+
+      <!--------------------------------------------------- COKE -------------------------------------------------------------->
+      <div class="pizza-section">
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Coke</b><br />
+              2 Liter<br />
+              250 cal. Classic Coke</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$3.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Drinks/CocaCola.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!---------------------------------------------------DIET COKE -------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Diet Coke</b><br />
+              2 Liter<br />
+              0 cal.</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$3.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Drinks/DietCocaCola.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+
+
+        <!---------------------------------------------------SPRITE  -------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Sprite</b><br />
+              2 Liter<br />
+              240 cal.</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$3.99</p>
+            </div>
+            <!-- image -->
+            <div style="height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Drinks/Sprite.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!------------------------------------------------FANTA ORANGE------------------------------------------------------------>
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Fanta Orange</b><br />
+              2 Liter<br />
+              230 cal.</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$3.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Drinks/Fanta.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!------------------------------------------------ROOT BEER ------------------------------------------------------------------>
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Root Beer</b><br />
+              2 Liter<br />
+              160 cal.</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$3.99</p>
+            </div>
+            <!-- image -->
+            <div style="height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Drinks/RootBeer.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!------------------------------------------------------DISANTI ------------------------------------------------------------>
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Disani</b><br />
+              20 Oz<br />
+              0 cal.</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$2.99</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Drinks/Disanti.jpg" width="120" height="100">
+            </div>
+          </div>
+        </div>
+
+        <!---------------------------------------------------PEACH TEA--------------------------------------------------------------->
+        <div class="pizza-list-item">
+          <!-- left size of box -->
+          <div class="pizza-list-item-left">
+            <p><b>Peach Tea</b><br />
+              20 Oz<br />
+              50 cal.</p>
+          </div>
+          <!-- right size of box -->
+          <div class="pizza-list-item-right">
+            <!-- price -->
+            <div style="display:flex;align-items: center;">
+              <p>$1.00</p>
+            </div>
+            <!-- image -->
+            <div style=" height: 100%;" class="pizza-list-item-image-div">
+              <img src="./Images/Drinks/PeacheTea.jfif" width="120" height="100">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- wish for this to be autogenerated from an xml or json file, would just need to contain the name, price, description, and image URL,  -->
+      <!-- pizza box -->
+      <!-- <div class="pizza-list-item">
+        
+        <div class="pizza-list-item-left">
+          <p>test name</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada proin libero nunc consequat interdum. </p>
+        </div>
+        
+        <div class="pizza-list-item-right">
+        
+          <div style="display:flex;align-items: center;">
+            <p>$00.00</p>
+          </div>
+        
+          <div style="border: 1px red solid; height: 100%;" class="pizza-list-item-image-div">
+            <img src="https://dummyimage.com/100x120/444/fff" alt="Logo" class="img-pizza">
+          </div>
+        </div>
+      </div> -->
+
+
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+<!-------------------------------------------------------------SCRIPTS-------------------------------------------------->
+<script>
+  function openModifiesSection(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+      x.style.display = "flex";
+      // document.getElementById("modify-button").innerHTML = "Close";
+    } else {
+      x.style.display = "none";
+      // document.getElementById("modify-button").innerHTML = "Modify";
+    }
+  }
+
+  function goToLogin() {
+    window.location.href = "./login.html";
+  }
+  document.getElementById("username").innerHTML = "welcome " + getCookie("fname");
+  function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+</script>

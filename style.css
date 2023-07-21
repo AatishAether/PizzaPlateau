@@ -1,0 +1,245 @@
+<<<<<<< HEAD
+
+/* START ------- This is for the Pizza Plateau logo photo  */
+.bigdiv {
+    width:50px;
+    height: 50px;;
+    position:absolute;
+ }
+ .bigdiv img {
+    position:absolute;
+    left:13%;
+    top:0%;
+    margin-left:0px;
+    margin-top:0px;
+ }
+ /* END ---------  This is for the Pizza Plateau logo photo  */
+
+
+=======
+>>>>>>> parent of 3e39dd7 (Merge branch 'main' of https://github.com/Gostofsparta3/CIS408Project)
+body{
+    overflow: auto;
+}
+.navbar{
+    background-color:  #e3ce8b;
+    border-color: #000000;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    height: fit-content;
+}
+.navbar-item{
+    display:flex;
+    color: #000000;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.body-page{
+    height: 100%;
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+}
+.catagories{
+    background-color:  #e3ce8b;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    width: 20%;
+    height: 100vh;
+<<<<<<< HEAD
+    overflow-x: scroll;
+=======
+
+}
+.catagories-item{
+    background-color: #45ffff;
+    border: black 1px solid;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.catagories-button{
+    color:blue;
+    background-color: #45ffff;
+    border: black 1px solid;
+    margin-bottom: 25px;
+    text-align: center;
+>>>>>>> parent of 3e39dd7 (Merge branch 'main' of https://github.com/Gostofsparta3/CIS408Project)
+}
+.pizza-list{
+    width: 80%;
+    background-color: #f9f5ce;
+    border: black 1px solid;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    
+}
+
+.pizza-list-item{
+    width: 90%;
+    display:flex; 
+    flex-direction: row;
+    background-color:rgb(255, 255, 255); 
+    justify-content: space-between;
+    height: min-content;
+    border: rgb(0, 0, 0) 1px solid;
+    border-width: 2px 2px;
+    margin: 10px;
+}
+.pizza-list-item:hover{
+    background-color: blanchedalmond;
+}
+.pizza-list-item-left{
+    display: block; 
+    /* width:80%; */
+}
+.pizza-list-item-right{
+    display:flex;
+    /* width:19%; */
+    align-items:center;
+    justify-content: space-between;
+    display:flex;
+    /* height:100%; */
+}
+.pizza-list-item-image-div{
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    
+}
+.pizza-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.price{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+/* .button-login{
+
+}
+.button-sign-up{
+
+}
+.button-view-cart{
+
+}
+.button-checkout{
+
+} */
+.pizza-modifiers-view{
+    
+    width: auto;
+    background-color: #f9f5ce;
+    color: #000000;
+    display: none;
+}
+.pizza-modifiers{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    width: 900px;
+    height: max-content
+}
+.pizza-modifiers-left{
+    display: flex;
+}
+.pizza-modifiers-left-item{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+.pizza-modifiers-right{
+    display: flex;
+    justify-content: space-around;
+    
+}
+<<<<<<< HEAD
+.pizza-modifiers-right-item{
+}
+.pizza-modifiers-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.pizza-modifiers-right-item-toppings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+}
+=======
+.pizza-modifiers-right-item{}
+.pizza-modifiers-right-item-toppings{}
+>>>>>>> parent of 3e39dd7 (Merge branch 'main' of https://github.com/Gostofsparta3/CIS408Project)
+.pizza-modifiers-right-item-toppings-item{}
+.divider{
+    display:flex; 
+    justify-content:space-between; 
+    margin-bottom: 10px; 
+    align-items:center;
+}
+.divider-bar{
+    border: 1px #000000 solid; 
+    background-color:red;  
+    height: 20px; 
+    width:45%; 
+    border-radius:25px;
+    /* align-items:center; */
+}
+.divider-text{
+    width:max-content;
+     font-size:35px;
+     text-align: center;
+     text-justify: center;
+}
+.img-pizza{
+    object-fit: cover;
+    height: 40px;
+    width:50px;
+
+    /* height: fill;
+    justify-content: stretch;
+    align-items: stretch; */
+}
+.payment-portal{
+    display: flex;
+    flex-direction: column;
+    ;
+}
+.address-portal{
+    display: flex;
+    flex-direction: column;
+    ;
+}
+.checkout-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.info-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 5px 2px 5px;
+}
